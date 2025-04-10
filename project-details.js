@@ -71,33 +71,33 @@ document.addEventListener('DOMContentLoaded', function() {
     githubRepo.href = project.repoLink;
     
     // Populate related projects (excluding current project)
-    const relatedProjectsContainer = document.getElementById('related-projects');
+    //const relatedProjectsContainer = document.getElementById('related-projects');
     
     // Get 3 random projects that aren't the current one
-    const relatedProjects = projectsData
-      .filter(p => p.id !== projectId)
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 3);
+    // const relatedProjects = projectsData
+    //   .filter(p => p.id !== projectId)
+    //   .sort(() => 0.5 - Math.random())
+    //   .slice(0, 3);
     
-    relatedProjects.forEach(relatedProject => {
-      const card = document.createElement('a');
-      card.className = 'related-project-card';
-      card.href = `project-details.html?id=${relatedProject.id}`;
+    // relatedProjects.forEach(relatedProject => {
+    //   const card = document.createElement('a');
+    //   card.className = 'related-project-card';
+    //   card.href = `project-details.html?id=${relatedProject.id}`;
       
-      const techList = relatedProject.tech
-        .map(t => `<span>${t.name}</span>`)
-        .join('');
+    //   const techList = relatedProject.tech
+    //     .map(t => `<span>${t.name}</span>`)
+    //     .join('');
       
-      card.innerHTML = `
-        <div class="related-project-img" style="background-image: url('${relatedProject.image}')"></div>
-        <div class="related-project-info">
-          <h4>${relatedProject.title}</h4>
-          <div class="related-project-tech">
-            ${techList}
-          </div>
-        </div>
-      `;
+    //   card.innerHTML = `
+    //     <div class="related-project-img" style="background-image: url('${relatedProject.image}')"></div>
+    //     <div class="related-project-info">
+    //       <h4>${relatedProject.title}</h4>
+    //       <div class="related-project-tech">
+    //         ${techList}
+    //       </div>
+    //     </div>
+    //   `;
       
-      relatedProjectsContainer.appendChild(card);
-    });
+    //   relatedProjectsContainer.appendChild(card);
+    // });
   });
