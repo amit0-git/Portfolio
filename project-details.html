@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Amit Verma">
+  <meta name="description" content="Project details for Amit Verma's portfolio">
+  <title>Project Details | Amit Verma</title>
+  <link rel="icon" href="assets/a.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="project-details.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">AV</a>
+        <div class="nav-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#resume">Resume</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#github">Github</a>
+          <a href="index.html#leetcode">Leetcode</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="project-details">
+    <div class="container animated">
+      <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      
+      <div class="project-details-content">
+        <div class="project-header">
+          <h1 id="project-title">Project Title</h1>
+          <div class="project-links">
+            <a href="#" id="live-demo" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" id="github-repo" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+          </div>
+        </div>
+
+        <div class="project-showcase">
+          <div class="project-image">
+            <img id="project-image" src="" alt="Project screenshot">
+          </div>
+          <div class="project-info">
+            <div class="info-section">
+              <h3>Overview</h3>
+              <p id="project-overview">Project overview will be displayed here.</p>
+            </div>
+            
+            <div class="info-section">
+              <h3>Technologies Used</h3>
+              <div id="project-tech" class="tech-tags"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-sections">
+          <div class="details-section">
+            <h3>Key Features</h3>
+            <ul id="key-features"></ul>
+          </div>
+
+          <div class="details-section">
+            <h3>Challenge & Solution</h3>
+            <p id="project-challenge">Description of challenges faced and solutions implemented.</p>
+          </div>
+
+          <div class="details-section">
+            <h3>Development Process</h3>
+            <p id="project-process">Information about the development process and approach.</p>
+          </div>
+        </div>
+
+        <div class="more-projects">
+          <h3>More Projects</h3>
+          <div id="related-projects" class="related-projects"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/amit0-git"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/amitk007/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-medium-m"></i></a>
+      </div>
+      <p>&copy; 2025 Amit Verma. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script src="projects-data.js"></script>
+  <script src="project-details.js"></script>
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Back to top button
+    const backToTopBtn = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
