@@ -9,21 +9,23 @@ const projectsData = [
       '/assets/screenshots/tic-tac-toe/1.png',
       '/assets/screenshots/tic-tac-toe/2.png',
     ],
-    overview: 'A classic Tic Tac Toe game with a modern, responsive interface that allows two players to compete against each other. The game includes features like move tracking, win detection, and game statistics in a clean, visually appealing UI.',
+    overview: "A classic Tic Tac Toe game with a modern, responsive interface. The game includes features like move tracking, win detection, and game statistics in a clean, visually appealing UI.",
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
       { name: 'JavaScript', icon: 'fab fa-js' }
     ],
     keyFeatures: [
-      'Interactive game board with hover effects and click animations',
+      'Game board with hover effects and click animations',
       'Real-time win detection algorithm that highlights winning combinations',
-      'Game state tracking with score keeping for multiple rounds',
-      'Responsive design that works on all devices from mobile to desktop',
+      'Player turn indication',
+      'Game replay',
       'Clean, modern UI with smooth transitions and animations',
-      'Reset functionality to start new games without page refresh'
+      "Gameplay sound"
+
     ],
-    challenge: 'Building this Tic Tac Toe game taught me how to structure game logic in JavaScript and create interactive UIs with event delegation. I learned how to efficiently check win conditions using arrays and developed a deeper understanding of DOM manipulation techniques. The project reinforced the importance of planning application state management and helped me improve my CSS skills through creating responsive layouts and engaging animations.',
+
+    challenge: 'Building this Tic Tac Toe game taught me how to structure game logic in JavaScript and create interactive UI. I learned how to efficiently check win conditions using matrix and developed a deeper understanding of DOM manipulation techniques. It helped me to connect backend with UI. It also helped me to explore javascript functions.',
     demoLink: 'https://tic-tac-toe-seven-psi-45.vercel.app/',
     repoLink: 'https://github.com/amit0-git/Tic-Tac-Toe'
   },
@@ -37,22 +39,22 @@ const projectsData = [
       '/assets/screenshots/sudoku/2.png',
       '/assets/screenshots/sudoku/3.png',
     ],
-    overview: 'A fully interactive Sudoku game with multiple difficulty levels, hint system, and solution validation. The game generates random puzzles and allows users to input numbers with real-time error checking and visual feedback.',
+    overview: 'Classic puzzle game with a modern, responsive interface. With features like highlight system, answer reveal etc.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
       { name: 'JavaScript', icon: 'fab fa-js' }
     ],
     keyFeatures: [
-      'Dynamic puzzle generation with varying difficulty levels (Easy, Medium, Hard)',
+
       'Real-time input validation and error highlighting for incorrect entries',
       'Hint system that reveals correct numbers to help players progress',
-      'Timer and move counter to track player performance',
-      'Note-taking mode for recording potential numbers in cells',
-      'Auto-save functionality to preserve game state between sessions',
-      'Clean, intuitive user interface with keyboard support'
+      'Real-time win detection algorithm that highlights winning combinations',
+      'Interactive and modern UI',
+      'Answer reveal functionality',
+
     ],
-    challenge: 'Developing this Sudoku game helped me master complex algorithms and recursive problem-solving techniques. I learned how to implement backtracking algorithms for puzzle generation and validation, which significantly improved my algorithmic thinking. The project taught me to balance computational efficiency with user experience, especially when generating new puzzles on-demand. I also gained experience in implementing game state persistence using local storage and learned how to build intuitive interfaces for complex rule-based games.',
+    challenge: 'Developing this Sudoku game helped me master complex algorithms and recursive problem-solving techniques. I learned how to implement backtracking algorithms for puzzle generation and validation, which significantly improved my algorithmic thinking. . I also gained experience in how to build intuitive interfaces for complex rule-based games.',
     demoLink: 'https://sudoku-psi-inky.vercel.app/',
     repoLink: 'https://github.com/amit0-git/Sudoku'
   },
@@ -65,7 +67,7 @@ const projectsData = [
       '/assets/screenshots/stopwatch/1.png',
       '/assets/screenshots/stopwatch/2.png',
     ],
-    overview: 'A precise, feature-rich stopwatch application built with React. It offers millisecond accuracy, lap timing functionality, and a clean, intuitive interface for time tracking needs with a visually appealing design that works across all devices.',
+    overview: 'Stopwatch built using React.js with clean and minimal interface including features like lap functionality etc.',
     tech: [
       { name: 'React', icon: 'fab fa-react' },
       { name: 'CSS3', icon: 'fab fa-css3' },
@@ -73,15 +75,14 @@ const projectsData = [
       { name: 'JavaScript', icon: 'fab fa-js' }
     ],
     keyFeatures: [
-      'Millisecond precision timing for accurate measurements',
+      'Clean and minimal UI',
       'Lap time recording and display with automatic sorting',
       'Start, pause, resume, and reset functionality',
-      'Visual indicators for running, paused, and stopped states',
-      'Elegant animations for state transitions and button interactions',
+
       'Responsive design that works on mobile, tablet, and desktop devices',
-      'Dark/light mode toggle to accommodate different viewing preferences'
+
     ],
-    challenge: 'Building this stopwatch application deepened my understanding of React hooks and state management. I learned how to implement precise timing mechanisms in JavaScript while avoiding common pitfalls like drift or lag. The project taught me about component lifecycle management and how to optimize performance for real-time updates. I also gained experience in creating responsive designs that maintain visual consistency across different device sizes and in implementing theming functionality that respects user preferences.',
+    challenge: 'Building this stopwatch application deepened my understanding of React hooks and state management. I learned how to implement precise timing mechanisms in JavaScript. The project taught me about component lifecycle management and how to optimize performance for real-time updates. I also gained experience in creating responsive designs that maintain visual consistency across different device sizes.',
     demoLink: 'https://stopwatch-opal-sigma.vercel.app/',
     repoLink: 'https://github.com/amit0-git/Stopwatch'
   },
@@ -100,23 +101,27 @@ const projectsData = [
       '/assets/screenshots/techfest-1/7.png',
 
     ],
-    overview: 'A dynamic website for a college technical festival with a modern, interactive design. The site features comprehensive event listings, registration forms, detailed schedules, and engaging animations to attract participants and provide all necessary information about the festival.',
+    overview: 'A website for the college technical fest with a modern design. Features include event listings, registration forms, detailed schedules, and engaging animations to attract participants and provide essential information.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
       { name: 'JavaScript', icon: 'fab fa-js' },
-      { name: 'Bootstrap', icon: 'fab fa-bootstrap' }
+      { name: 'PHP', icon: 'fa-brands fa-php' },
+      { name: 'XML' },
+      { name: 'Anime Js' },
+      { name: 'XSL' }
+
     ],
     keyFeatures: [
-      'Parallax scrolling and dynamic animations to create an engaging user experience',
-      'Comprehensive event listings with filtering options by category and time',
-      'Registration system with form validation and confirmation emails',
-      'Interactive schedule with timeline view and event details',
-      'Team and sponsor showcase sections with smooth carousels',
-      'Mobile-responsive design with optimized navigation for small screens',
-      'Contact form with validation and Google Maps integration'
+      'Responsive and modern look with animations',
+      'Intersection Observer API for animated appearance',
+      'Custom navigation widget',
+      'Background Animations',
+      'Transform XML data using XSL',
+
+      'Contact form and Google Maps integration'
     ],
-    challenge: 'Developing this tech fest website taught me how to create visually striking web experiences while maintaining usability. I learned techniques for implementing advanced CSS animations and transitions that enhance rather than distract from the content. The project improved my skills in responsive design and mobile-first development, ensuring the site worked well across all device sizes. I also gained experience in optimizing assets for performance and implementing accessibility features to ensure all users could access the content effectively.',
+    challenge: 'Developing this techfest website taught me how to create visually striking web experiences while maintaining usability. I learned animation libraries like Anime.js. The project improved my skills in responsive design and animations in web, ensuring the site worked well across all device sizes. I also designed custom navigation widget for navigation across various pages.',
     demoLink: 'https://techvyom-2024.vercel.app/',
     repoLink: 'https://github.com/amit0-git/Techvyom-2k24'
   },
@@ -131,7 +136,7 @@ const projectsData = [
 
 
     ],
-    overview: 'A lightweight, privacy-focused desktop browser application built with Python and PyQt. Infisurf offers a streamlined browsing experience with a focus on speed and user privacy, featuring a modern interface with customizable settings and extensions.',
+    overview: 'A Windows application built to allow hostel students to log in to the Wi-Fi once and surf the internet without having to log in repeatedly.',
     tech: [
       { name: 'Python', icon: 'fab fa-python' },
       { name: 'PyQt', icon: 'fab fa-qt' },
@@ -139,16 +144,11 @@ const projectsData = [
       { name: 'CSS3', icon: 'fab fa-css3' }
     ],
     keyFeatures: [
-      'Tabbed browsing interface with drag-and-drop tab management',
-      'Comprehensive bookmarking system with folder organization',
-      'History tracking with search functionality and privacy mode',
-      'Customizable privacy features including cookie management and ad blocking',
-      'Multiple search engine options with quick switching capability',
-      'Custom UI with light and dark themes that adapt to system preferences',
-      'Download manager with pause/resume functionality',
-      'Performance optimization features to reduce memory usage'
+      'Clean interface for desktop',
+      'Tabbed Navigation',
+
     ],
-    challenge: 'Building Infisurf significantly expanded my knowledge of desktop application development and PyQt framework. I learned how to integrate web rendering engines with native desktop interfaces and gained deep insights into browser architecture. The project taught me about thread management in UI applications, particularly how to handle background processes without freezing the interface. I also developed skills in memory management and optimization techniques to ensure the browser remained responsive even with multiple tabs open. Working on custom UI components improved my understanding of the relationship between visual design and user experience.',
+    challenge: 'Building Infisurf significantly expanded my knowledge of desktop application development and PyQt framework. The project taught me about thread management in UI applications, particularly how to handle background processes without freezing the interface. I also developed skills in memory management and optimization techniques.',
     demoLink: 'https://infisurf-website.vercel.app/',
     repoLink: 'https://github.com/amit0-git/Infisurf'
   },
@@ -161,25 +161,20 @@ const projectsData = [
       '/assets/screenshots/covid/1.png',
 
     ],
-    overview: 'A comprehensive COVID-19 information dashboard providing real-time statistics, safety guidelines, and resources. The site features interactive data visualizations, regional tracking, and mobile-friendly design to help users stay informed during the pandemic.',
+    overview: 'A website built on the topic COVID 19 pandemic with clean and responsive interface providing necessary information.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
       { name: 'JavaScript', icon: 'fab fa-js' },
-      { name: 'Chart.js', icon: 'fas fa-chart-line' },
-      { name: 'API Integration', icon: 'fas fa-code' }
+     
     ],
     keyFeatures: [
-      'Real-time COVID-19 statistics with interactive data visualizations',
-      'Regional tracking with color-coded maps showing case distribution',
-      'Trend analysis with historical data comparison charts',
-      'Comprehensive safety guidelines and prevention tips with illustrations',
-      'Resource directory for testing, vaccination, and treatment facilities',
+      'Clean and responsive interface',
+   
       'Mobile-optimized design for access on any device',
-      'Accessibility features following WCAG guidelines',
-      'Multilingual support for broader user reach'
+
     ],
-    challenge: 'Developing this COVID-19 dashboard taught me how to effectively communicate complex data through visualizations and intuitive interfaces. I learned how to integrate and consume multiple external APIs while implementing error handling and fallback mechanisms for data reliability. The project improved my skills in data normalization and transformation, essential for creating meaningful visualizations from diverse data sources. I also gained experience in creating accessible designs that could be used by people with disabilities, and in implementing performance optimizations to ensure the dashboard remained responsive even when handling large datasets.',
+    challenge: 'Developing this COVID-19 website taught me HTML, CSS and Javascript. I also learned responsive design and how to make a website accessible on any device.',
     demoLink: 'https://covid-19-website-self.vercel.app/',
     repoLink: 'https://github.com/amit0-git/Covid-19-Website'
   },
@@ -194,25 +189,19 @@ const projectsData = [
       '/assets/screenshots/techfest-2/3.png',
 
     ],
-    overview: 'A completely redesigned version of the college tech fest website with improved UI/UX, additional features, and enhanced performance. The site offers a more immersive experience with advanced animations, integrated social media features, and streamlined event registration processes.',
+    overview: 'A website for the college technical fest with a modern design and animations. Features include event listings, registration forms, detailed schedules, and engaging animations to attract participants and provide essential information.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
       { name: 'JavaScript', icon: 'fab fa-js' },
-      { name: 'GSAP', icon: 'fas fa-magic' },
-      { name: 'Firebase', icon: 'fas fa-fire' }
+     
     ],
     keyFeatures: [
-      'Modernized UI with advanced animations and micro-interactions',
-      'Enhanced event registration system with user accounts and profiles',
-      'Real-time updates for event changes and announcements',
-      'Integrated social media sharing and promotional tools',
-      'Performance optimizations for faster loading times',
-      'Expanded content areas including blog, gallery, and testimonials',
-      'Virtual event capabilities with livestream integration',
-      'Admin dashboard for event organizers to manage content'
+      'Modernized UI with advanced animations ',
+      "Responsive and modern design",
+   
     ],
-    challenge: 'Redesigning the tech fest website taught me valuable lessons about iterative design improvement and user feedback implementation. I learned advanced animation techniques using GSAP and how to implement them without sacrificing performance. The project deepened my understanding of user experience design principles and how they influence user engagement and conversion rates. I gained experience in implementing more complex backend functionality through Firebase integration, including user authentication and real-time data synchronization. The process of refactoring and rebuilding an existing application gave me insights into maintaining code quality and documentation during significant updates.',
+    challenge: 'This website taught me advanced concepts of HTML, CSS and Javascript. I also learned how to create animations and make a website more engaging and responsive. It also helped me to learn DOM manipulation.',
     demoLink: 'https://techvyom-website.vercel.app/',
     repoLink: 'https://github.com/amit0-git/techvyom-website'
   },
@@ -231,13 +220,15 @@ const projectsData = [
       '/assets/screenshots/event-manager-2/7.png',
       '/assets/screenshots/event-manager-2/8.png',
     ],
-    overview: 'A comprehensive event management system designed specifically for college events. The application streamlines the entire event lifecycle from planning and registration to attendance tracking and post-event analysis, helping organizers manage events more efficiently.',
+    overview: 'Event manager portal built using MERN stack to manage all the events organised in college/school by allowing users to register for event , view event details, view event schedule.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
+      { name: 'React.js', icon: 'fa-brands fa-react' },
       { name: 'JavaScript', icon: 'fab fa-js' },
       { name: 'Node.js', icon: 'fab fa-node' },
-      { name: 'MongoDB', icon: 'fas fa-database' }
+      { name: 'MongoDB', icon: 'fas fa-database' },
+      { name: 'reCaptcha' }
     ],
     keyFeatures: [
       'Intuitive event creation and management dashboard',
@@ -268,7 +259,7 @@ const projectsData = [
       '/assets/screenshots/event-manager-1/7.png',
 
     ],
-    overview: 'A comprehensive event management system designed specifically for college events. The application streamlines the entire event lifecycle from planning and registration to attendance tracking and post-event analysis, helping organizers manage events more efficiently.',
+    overview: 'Event manager portal built using Node.js to manage all the events organised in college/school by allowing users to register for event , view event details, view event schedule.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
@@ -306,7 +297,7 @@ const projectsData = [
       '/assets/screenshots/tuition/8.png',
 
     ],
-    overview: 'A comprehensive event management system designed specifically for college events. The application streamlines the entire event lifecycle from planning and registration to attendance tracking and post-event analysis, helping organizers manage events more efficiently.',
+    overview: 'Windows application built with clean interface to manage tuition students and their data. It keeps track of their fees , generate fee receipts etc.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
@@ -329,7 +320,7 @@ const projectsData = [
     repoLink: 'https://github.com/amit0-git/Tuition-Management'
   },
 
-  
+
   {
     id: 'dictionary',
     title: 'Dictionary Extension',
@@ -341,7 +332,7 @@ const projectsData = [
 
 
     ],
-    overview: 'A comprehensive event management system designed specifically for college events. The application streamlines the entire event lifecycle from planning and registration to attendance tracking and post-event analysis, helping organizers manage events more efficiently.',
+    overview: 'A dictionary extension built with minimal interface to provide quick access to definitions of words. It has features like word speaking etc.',
     tech: [
       { name: 'HTML5', icon: 'fab fa-html5' },
       { name: 'CSS3', icon: 'fab fa-css3' },
