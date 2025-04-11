@@ -48,7 +48,17 @@
 
         <div class="project-showcase">
           <div class="project-image">
-            <img id="project-image" src="" alt="Project screenshot">
+            <!-- Image carousel -->
+            <div class="carousel-container">
+              <div class="carousel-slides" id="project-image-carousel">
+                <!-- Slides will be populated by JavaScript -->
+              </div>
+              <button class="carousel-btn prev" id="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="carousel-btn next" id="carousel-next"><i class="fas fa-chevron-right"></i></button>
+              <div class="carousel-dots" id="carousel-dots">
+                <!-- Dots will be populated by JavaScript -->
+              </div>
+            </div>
           </div>
           <div class="project-info">
             <div class="info-section">
@@ -70,13 +80,8 @@
           </div>
 
           <div class="details-section">
-            <h3>Challenge & Solution</h3>
-            <p id="project-challenge">Description of challenges faced and solutions implemented.</p>
-          </div>
-
-          <div class="details-section">
-            <h3>Development Process</h3>
-            <p id="project-process">Information about the development process and approach.</p>
+            <h3>Learning and Takeaway</h3>
+            <p id="project-learning">Key learnings and takeaways from this project.</p>
           </div>
         </div>
 
