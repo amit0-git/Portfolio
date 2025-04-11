@@ -45,8 +45,33 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1px 0;
 }
+
+#animated-role {
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blink 0.7s steps(1) infinite;
+    font-family: monospace;
+    min-height: 1.6em;
+    /* Prevents collapsing during deletion */
+}
+
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
 
 .logo {
     font-size: 1.8rem;
@@ -113,6 +138,12 @@ nav {
     font-size: 2.5rem;
     color: var(--primary);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.hero-img img{
+    height: 170px;
+    width: 150px;
+    margin-top: 20px;
 }
 
 .hero h1 {
@@ -365,6 +396,10 @@ section h2:after {
     padding: 1.5rem;
 }
 
+.project-content p {
+    font-size: 14px;
+}
+
 .project-content h3 {
     margin-bottom: 0.8rem;
     color: var(--secondary);
@@ -572,8 +607,10 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        /* Changed from absolute to fixed */
+        top: 30px;
+        /* Adjust based on your header height */
         left: 0;
         width: 100%;
         background-color: var(--primary);
@@ -581,15 +618,48 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        z-index: 10;
+        z-index: 100;
+        /* Increased z-index */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        /* Added transition */
     }
 
     .nav-links.active {
         display: flex;
+        animation: slideDown 0.3s ease-out forwards;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 1.5rem;
+        width: 80%;
+        text-align: center;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:after {
+        display: none;
+        /* Remove underline effect on mobile */
     }
 
     .mobile-menu-btn {
         display: block;
+        z-index: 101;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-menu-btn:hover {
+        transform: scale(1.1);
     }
 
     .hero h1 {
@@ -641,4 +711,122 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #0055aa;
+}
+
+
+/* Add these styles for the LeetCode section */
+.leetcode-cont {
+    padding: 2rem 0;
+    background-color: white;
+}
+
+.leetcode-cont h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    position: relative;
+}
+
+.leetcode-cont h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    border-radius: 2px;
+}
+
+.leetcode-stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.leetcode-card {
+    flex: 1 1 400px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leetcode-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.leetcode-badges {
+    flex: 1 1 400px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.leetcode-badge {
+    background-color: #f8f9fa;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.leetcode-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.leetcode-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.leetcode-profile-link:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
+@media (max-width: 768px) {
+    .leetcode-stats-container {
+        flex-direction: column;
+    }
+
+    .leetcode-card,
+    .leetcode-badges {
+        flex: 1 1 auto;
+        width: 100%;
+    }
 }

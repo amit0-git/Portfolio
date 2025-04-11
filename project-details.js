@@ -42,7 +42,43 @@ document.addEventListener('DOMContentLoaded', function () {
   project.tech.forEach(tech => {
     const techTag = document.createElement('div');
     techTag.className = 'tech-tag';
-    techTag.innerHTML = tech.icon ? `<i class="${tech.icon}"></i> ${tech.name}` : tech.name;
+    
+    // Use iconify for technology icons
+    const iconMap = {
+      'HTML5': 'vscode-icons:file-type-html',
+      'CSS3': 'vscode-icons:file-type-css',
+      'JavaScript': 'vscode-icons:file-type-js-official',
+      'React': 'material-icon-theme:react-ts',
+      'Node.js': 'vscode-icons:file-type-node',
+      'MongoDB': 'simple-icons:mongodb',
+      'Python': 'vscode-icons:file-type-python',
+      'PyQt': 'simple-icons:qt',
+      'PHP': 'vscode-icons:file-type-php',
+      'XML': 'vscode-icons:file-type-xml',
+      'XSL': 'vscode-icons:file-type-xsl',
+      'Anime Js': 'logos:animejs',
+      'reCaptcha': 'logos:recaptcha',
+      'jwt':'logos:jwt-icon',
+      'MySQL':"logos:mysql",
+      'threading':'material-symbols-light:thread-unread',
+      'FPDF':'catppuccin:pdf',
+      "JSON":"material-icon-theme:json",
+      "REST API":'mynaui:api',
+      'API':'eos-icons:api'
+    };
+    
+    const iconName = iconMap[tech.name] || 'carbon:unknown';
+    
+    const iconElement = document.createElement('iconify-icon');
+    iconElement.setAttribute('icon', iconName);
+    iconElement.setAttribute('width', '18');
+    iconElement.setAttribute('height', '18');
+    
+    techTag.appendChild(iconElement);
+    
+    const textNode = document.createTextNode(` ${tech.name}`);
+    techTag.appendChild(textNode);
+    
     techContainer.appendChild(techTag);
   });
 
@@ -63,13 +99,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (project.demoLink) {
     liveDemo.href = project.demoLink;
+    liveDemo.innerHTML = '<iconify-icon icon="carbon:launch" width="18" height="18"></iconify-icon> Live Demo';
   } else {
-    liveDemo.innerHTML = '<i class="fas fa-external-link-alt"></i> Demo Coming Soon';
+    liveDemo.innerHTML = '<iconify-icon icon="carbon:launch" width="18" height="18"></iconify-icon> Demo Coming Soon';
     liveDemo.classList.add('disabled-link');
     liveDemo.href = 'javascript:void(0)';
   }
 
   githubRepo.href = project.repoLink;
+  githubRepo.innerHTML = '<iconify-icon icon="mdi:github" width="18" height="18"></iconify-icon> GitHub Repo';
 });
 
 // Function to set up the carousel
@@ -79,8 +117,7 @@ function setupCarousel(project) {
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
 
-  // For now, we'll use the single image as the first slide
-  // In a real implementation, you'd loop through an array of images
+  // Use slides from project data
   const slides = project.screenshots.map((src, index) => {
     return { src, alt: `${project.title} screenshot ${index + 1}` };
   });
@@ -95,7 +132,7 @@ function setupCarousel(project) {
     const img = document.createElement('img');
     img.src = slide.src;
     img.alt = slide.alt;
-    img.loading="lazy";
+    img.loading = "lazy";
 
     slideDiv.appendChild(img);
     carouselSlides.appendChild(slideDiv);
@@ -134,6 +171,10 @@ function setupCarousel(project) {
       dot.classList.toggle('active', index === currentSlide);
     });
   }
+
+  // Set up carousel navigation with Iconify icons
+  prevBtn.innerHTML = '<iconify-icon icon="akar-icons:chevron-left"></iconify-icon>';
+  nextBtn.innerHTML = '<iconify-icon icon="akar-icons:chevron-right"></iconify-icon>';
 
   // Set up event listeners
   prevBtn.addEventListener('click', prevSlide);
