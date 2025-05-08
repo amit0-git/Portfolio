@@ -8,23 +8,26 @@ const projectsData = [
       '/assets/Screenshot 2025-04-07 165907.png',
       '/assets/screenshots/tic-tac-toe/1.png',
       '/assets/screenshots/tic-tac-toe/2.png',
+      '/assets/screenshots/tic-tac-toe/3.png',
+      '/assets/screenshots/tic-tac-toe/4.png',
     ],
     overview: "A classic Tic Tac Toe game with a modern, responsive interface. The game includes features like move tracking, win detection, and game statistics in a clean, visually appealing UI.",
     tech: [
       { name: 'HTML5' },
       { name: 'CSS3' },
-      { name: 'JavaScript' }
+      { name: 'JavaScript' },
+      {name:"Socket.io"}
     ],
     keyFeatures: [
-      'Game board with hover effects and click animations',
+      'Solo vs Multiplayer Mode',
       'Real-time win detection algorithm that highlights winning combinations',
       'Player turn indication',
       'Game replay',
-      'Clean, modern UI with smooth transitions and animations',
+      'Rematch in multiplayer',
       "Gameplay sound"
     ],
     challenge: 'Building this Tic Tac Toe game taught me how to structure game logic in JavaScript and create interactive UI. I learned how to efficiently check win conditions using matrix and developed a deeper understanding of DOM manipulation techniques. It helped me to connect backend with UI. It also helped me to explore javascript functions.',
-    demoLink: 'https://tic-tac-toe-seven-psi-45.vercel.app/',
+    demoLink: 'https://tic-tac-toe-tc03.onrender.com/',
     repoLink: 'https://github.com/amit0-git/Tic-Tac-Toe'
   },
   {

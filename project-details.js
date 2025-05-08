@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
       'FPDF':'catppuccin:pdf',
       "JSON":"material-icon-theme:json",
       "REST API":'mynaui:api',
-      'API':'eos-icons:api'
+      'API':'eos-icons:api',
+      "Socket.io":"tabler:brand-socket-io"
     };
     
     const iconName = iconMap[tech.name] || 'carbon:unknown';
