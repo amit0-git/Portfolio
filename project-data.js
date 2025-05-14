@@ -116,7 +116,7 @@ const projectsData = [
       'Contact form and Google Maps integration'
     ],
     challenge: 'Developing this techfest website taught me how to create visually striking web experiences while maintaining usability. I learned animation libraries like Anime.js. The project improved my skills in responsive design and animations in web, ensuring the site worked well across all device sizes. I also designed custom navigation widget for navigation across various pages.',
-    demoLink: 'https://techvyom-2024.vercel.app/',
+    demoLink: 'https://techvyom-2k24.vercel.app/',
     repoLink: 'https://github.com/amit0-git/Techvyom-2k24'
   },
   {
